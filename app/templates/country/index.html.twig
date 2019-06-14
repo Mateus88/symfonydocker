@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block content %}
+        <div class="row search">
+            <div class="col-md-12">
+                <div class="input-group mb-3">
+                    <input name="search" type="text" class="form-control searchinput" placeholder="Digite o país"
+                           aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-search" type="button">Pesquisa</button>
+                    </div>
+                </div>
+                <p>As suas ultimas pesquisas foram : <span class="lastSearch"> </span></p>
+                <button class="btn btn-outline-secondary last-search" type="button">Última pesquisa</button>
+            </div>
+        </div>
+        <div class="row tableresult">
+            <div class="col-md-12">
+                <table id="infoCountry" class="display" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Alpha 2 Code</th>
+                        <th>Alpha 3 Code</th>
+                        <th>Numeric Code</th>
+                        <th>Continente</th>
+                        <th>População</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}
